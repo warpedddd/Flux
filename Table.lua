@@ -142,7 +142,7 @@
                             -- // Inventory Sorter // --
                             local Sorter    = {
                                 Enabled = On;                           -- [Boolean] 
-                                Keybind = "L";                          -- [String] 
+                                Bind = "L";                          -- [String] 
                                 Slot1   = "[Double-Barrel SG]";         -- [String] 
                                 Slot2   = "[Revolver]";                 -- [String] 
                                 Slot3   = "[TacticalShotgun]";          -- [String] 
