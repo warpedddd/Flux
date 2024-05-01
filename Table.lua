@@ -142,7 +142,7 @@
                             -- // Inventory Sorter // --
                             local Sorter    = {
                                 Enabled = On;                           -- [Boolean] 
-                                Bind = "L";                          -- [String] 
+                                Bind = "L";                             -- [String] 
                                 Slot1   = "[Double-Barrel SG]";         -- [String] 
                                 Slot2   = "[Revolver]";                 -- [String] 
                                 Slot3   = "[TacticalShotgun]";          -- [String] 
@@ -154,8 +154,8 @@
                                 Slot9   = "[Hamburger]";                -- [String] 
                                 Slot0   = "";                           -- [String] 
 
-                                Remove  = {
-                                    Items = {"[Wallet]", "[Phone]", "[Boombox]"}
+                                Remove  = {                             -- [String] 
+                                    Items = {"[Wallet]", "[Phone]", "[Boombox]"} 
                                 };
                             };
 
