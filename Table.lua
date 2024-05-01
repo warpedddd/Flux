@@ -46,10 +46,6 @@
                                 PredictionX     = 0.11;                 -- [Decimal]
                                 PredictionY     = 0.11;                 -- [Decimal]
                                 PredictionZ     = 0.11;                 -- [Decimal]
-
-                                ResolvedX       = 0.1815;               -- [Decimal]
-                                ResolvedY       = 0;                    -- [Decimal or Integer]
-                                ResolvedZ       = 0.1815;               -- [Decimal]
                             };
 
                             -- // Bullet Redirector // --
