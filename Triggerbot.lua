@@ -8,18 +8,20 @@ getgenv().Triggerbot = {
 }
 
 -- // Services // --
-local G                = game
-local UserInputService = G:GetService("UserInputService");
-local Players      	   = G:GetService("Players");
-local Local_Player     = Players.LocalPlayer;
-local Get_Mouse_Pos    = Local_Player:GetMouse();
-local Current_Camera   = G:GetService("Workspace").CurrentCamera;
+local G                   = game
+local UserInputService    = G:GetService("UserInputService");
+local Players      	      = G:GetService("Players");
+local Local_Player        = Players.LocalPlayer;
+local Get_Mouse_Pos       = Local_Player:GetMouse();
+local UserInputService    = game:GetService("UserInputService");
+local VirtualInputManager = game:GetService("VirtualInputManager");
+local Current_Camera      = G:GetService("Workspace").CurrentCamera;
 
 -- // Variables // --
-local Target           = {};
-local Triggerbot       = false;
-local V2               = Vector2.new;
-local Field_Of_View    = Drawing.new("Circle");
+local Target              = {};
+local Triggerbot          = false;
+local V2                  = Vector2.new;
+local Field_Of_View       = Drawing.new("Circle");
 
 -- // Get Closest Player // --
 local GetClosestPlr; GetClosestPlr = function()
@@ -142,7 +144,8 @@ local Run_Service = G:GetService("RunService"); Run_Service.RenderStepped:Connec
 
         -- // If the cursor is inside of the field of view it will start clicking (mouse1press and mouse1click are broken on Solara) // -- 
         if (Target[2] and Target[2].Character) then
-            game:GetService("VirtualUser"):ClickButton1(V2());
+            VirtualInputManager:SendMouseButtonEvent(UserInputService:GetMouseLocation().X, UserInputService:GetMouseLocation().Y, 0, true, game, 1)
+            VirtualInputManager:SendMouseButtonEvent(UserInputService:GetMouseLocation().X, UserInputService:GetMouseLocation().Y, 0, false, game, 1)
         end
     else
         -- // Turns the field of view non-visible if no target is found // --
